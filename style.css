@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    overflow: auto; /* Prevent scrolling */
+    background-color: #ffffff;
+    overflow: auto;
 }
 
 header {
@@ -54,67 +54,67 @@ main {
 
 }
 
-        section#home {
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            padding: 0;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .image-container {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
-
-            .image-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Ensures the image fills the space without distortion */
-            }
-
-            .text-container {
-                position: absolute; 
-                display: flex; /* Add this line to enable flexbox */
-                font-size: 72px;
-                justify-content: center;
-                align-items: center;
-                top: 60%; 
-                left: 50%; 
-                transform: translate(-50%, -50%);
-                font-family: "Red Rose";
-                color: #FFF600;
-                text-align: center; /* Align text to the center */
-            }
-
-            .additional-text {
-                position: absolute; 
-                display: flex; /* Add this line to enable flexbox */
-                font-size: 20px;
-                justify-content: center;
-                align-items: center;
-                top: 68%; 
-                left: 50%; 
-                transform: translate(-50%, -50%);
-                font-family: "Red Rose";
-                color: #ffffff;
-                font-weight: 700;
-                text-align: center; /* Align text to the center */
-            }
-
 footer {
     background-color: #E8E8E8;
     color: black;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     height: 40px;
     width: 100%;
     bottom: 0;
 }
+
+#home {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the space without distortion */
+        }
+
+        .text-container {
+            position: absolute; 
+            display: flex; /* Add this line to enable flexbox */
+            font-size: 72px;
+            justify-content: center;
+            align-items: center;
+            top: 60%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            font-family: "Red Rose";
+            color: #FFF600;
+            text-align: center; /* Align text to the center */
+        }
+
+        .additional-text {
+            position: absolute; 
+            display: flex; /* Add this line to enable flexbox */
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            top: 68%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            font-family: "Red Rose";
+            color: #ffffff;
+            font-weight: 700;
+            text-align: center; /* Align text to the center */
+        }
 
 @media (max-width: 1528px) {
     .text-container {
@@ -139,6 +139,139 @@ footer {
     }
 }
 
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    overflow-y: auto; /* Make the hero section scrollable */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+        .project-details {
+            max-width: 40%;
+            height: 615px;
+            flex: 1; /* Allow the text container to grow and shrink */
+            padding: 65px; /* Add padding for better spacing */
+            font-family: "Red Hat Display";
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333; /* Text color */
+            text-align: left; /* Align text to the left */
+            float: left;
+            position: relative;
+        }
+
+        #projects h1 {
+            font-size: 2rem;
+            margin-top: 90px;
+            margin-bottom: -20px; /* Reduce the gap between h1 and p */
+            text-align: center;
+            justify-content: center;
+            font-family: "Red Hat Display";
+        }
+
+        #projects p {
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: lighter;
+            text-align: center; /* Align text to the center */
+            font-family: "calibri";
+            justify-content: center;
+        }
+
+        .video-container1 {
+            max-width: 49%;
+            padding: 100px 30px;
+            flex: 1; /* Allow the video container to grow and shrink */
+            float: right;
+        }
+
+        .video-container2 {
+            max-width: 49%;
+            padding: 100px 10px;
+            flex: 1; /* Allow the video container to grow and shrink */
+            float: left;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            border: 10px solid #000; /* Add a border to the video */
+        }
+
+        .img-container1, .img-container2, .img-container3 {
+            max-width: 30%;
+            padding: 31px;
+            margin: 0px;
+            flex: 1; /* Allow the container to grow and shrink */
+            float: left;
+        }
+
+        .img-container4, .img-container5, .img-container6 {
+            max-width: 30%;
+            padding: 31px;
+            margin: 0px;
+            flex: 1; /* Allow the container to grow and shrink */
+            float: right;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+@media (max-width: 1024px) {
+    .project-details {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .video-container1, .video-container2 {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .project-container {
+        padding: 10px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #projects h1 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    #projects p {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .project-details {
+        font-size: 16px;
+    }
+    .project-container {
+        padding: 10px 20px;
+    }
+    .video-container1, .video-container2 {
+        max-width: 100%;
+        padding: 0px;
+    }
+    .img-container1, .img-container2, .img-container3, .img-container4, .img-container5, .img-container6 {
+        max-width: 50%;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 #about {
     display: flex;
     flex-direction: column;
@@ -149,11 +282,24 @@ footer {
     background-color: #ffffff;
     overflow-y: auto; /* Make the hero section scrollable */
     width: 100%;
+    align-items: center;
 }
+
+        .about-details {
+            max-width: 100%;
+            margin: 30px;
+            flex: 1; /* Allow the text container to grow and shrink */
+            padding: 0px; /* Add padding for better spacing */
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333; /* Text color */
+            float: right;
+        }
+
         #about h1 {
+            margin-top: 100px;
             font-size: 2rem;
             margin-bottom: 0px;
-            margin-top: 20px;
             text-align: center;
             font-family: "Red Hat Display";
         }
@@ -161,62 +307,82 @@ footer {
         #about p {
             font-size: 24px;
             line-height: 1.4;
-            font-weight: bold;
+            font-weight: lighter;
             margin-top: 0;
-            margin-bottom: 20px;
-            text-align: left;
+            text-align: center; /* Align text to the center */
+            font-family: "calibri";
             font-family: "Red Hat Display";
-
         }
 
-        .video-container {
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        flex: 1; /* Allow the video container to grow and shrink */
-        left: 0;
-        right: 0;
-        }
-
-        video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        }
-
-        .project-container {
-            max-width: 100%;
-            height: auto; /* Adjust height to auto to fit content */
-            display: flex;
-            flex-wrap: wrap; /* Allow items to wrap */
-            align-items: center;
+        .about-container {
+            width: 20%;
+            height: auto;
+            overflow: hidden;
             justify-content: center;
-            font-size: 24px;
-            background-color: #fff;
-            overflow-y: auto;
-            padding: 20px 100px; /* Add padding for better spacing */
+            align-items: center;
+            border-radius: 10px;
+            border: 2px solid #000; 
         }
 
-        .project-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 100px;
         }
 
-@media (max-width: 768px) {
-    #about h1 {
-        font-size: 1.5rem;
-        margin-top: 10px;
-    }
-    #about p {
-        font-size: 18px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-    }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
 
-    .project-container {
-        padding: 10px 20px;
-    }
-}
-    
+        .container {
+            padding: 30px 30px;
+            position: relative;
+            width: 50%;
+        }
+        .left {
+            left: -10%;
+            text-align: center;
+
+        }
+        .right {
+            left: 52%;
+            text-align: center;
+        }
+        .content {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #007bff;
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #007bff;
+        }
+        h2 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #007bff;  
+        }
+        p {
+            font-size: 14px;
+            color: #333;
+        }
