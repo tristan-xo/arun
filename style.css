@@ -44,7 +44,7 @@ header {
             padding: 0px 8px;
             text-decoration: none;
         }
-
+        
 main {
     display: flex;
     align-items: center;
@@ -58,11 +58,19 @@ footer {
     background-color: #E8E8E8;
     color: black;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
     position: relative;
-    height: 40px;
+    height: 60px;
     width: 100%;
-    bottom: 0;
+    bottom: 0px;
+    line-height: .5;
+}
+
+@media (max-width: 1900px) {
+    footer {
+        position: relative;
+        top: 200px; /* Adjust the value as needed to place the footer below the location section */
+    }
 }
 
 #home {
@@ -116,29 +124,323 @@ footer {
             text-align: center; /* Align text to the center */
         }
 
-@media (max-width: 1528px) {
-    .text-container {
-        font-size: 48px;
-        top: 50%;
-    }
+        .explore-works {
+            width: 250px;
+            background-color: #ff3e3e;
+            margin: 30px auto 0;
+            border-radius: 2px;
+            padding: 10px 0px;
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001; /* Ensure it appears above other elements */
+        }
 
-    .additional-text {
-        font-size: 12px;
-        top: 60%;
-    }
-}
+        .explore-works a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .explore-works a:hover {
+            text-decoration: underline;
+        }
+
+/* Responsive Styling */
 @media (max-width: 768px) {
     .text-container {
-        font-size: 32px;
-        top: 60%;
+        font-size: 48px; /* Adjust font size for smaller screens */
     }
 
     .additional-text {
-        font-size: 12px;
-        top: 70%;
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .explore-works {
+        width: 200px; /* Adjust button width for smaller screens */
+        padding: 8px 0px; /* Adjust padding for smaller screens */
+    }
+
+    .explore-works a {
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 }
 
+/* About Section */
+#about {
+    max-width: 100%;
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: -100px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+        #about h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: "Red Hat Display";
+        }
+
+        #about p{
+            max-width: 100%;
+            font-size: 24px;
+            line-height: 1.6;
+            color: #333;
+            font-weight: lighter;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        /* Text and Image Container Side by Side */
+        .text-image-container {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px; /* Space between text and image */
+        }
+
+        .text-image-container .image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .text-image-container .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .about-text {
+            flex: 1;
+            line-height: 1.6;
+            color: #333;
+            font-family: "Red Hat Display";
+        }
+
+/* Responsive Styling */
+@media (max-width: 1350px) {
+    #about {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 10px;
+    }
+    #about h2 {
+        font-size: 24px;
+    }
+    #about p {
+        font-size: 18px;
+    }
+    .text-image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-image-container .image{
+        max-width: 100%;
+    }
+}
+
+/* Resume Section */
+#resume {
+    max-width: 300px;
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+        #resume h2 {
+            padding: 10px;
+            margin-top: -2.5px;
+            font-size: 18px;
+            margin-bottom: 0px;
+            font-family: "Red Hat Display";
+        }
+
+        #resume p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 0px;
+            padding: 0px ;
+            color: #333;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: inline; 
+            vertical-align: middle;
+        }
+
+        .resume-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .resume-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .resume-links img {
+            object-fit: contain;
+            width: 40px; 
+            height: 50px; 
+            margin-top: -5px;
+            vertical-align: middle;
+            gap: 50px;
+        }
+
+/* Responsive Styling */
+@media (max-width: 1900px) {
+    #resume {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px; /* Adjust height for smaller screens */
+        position: relative;
+        left: 0;
+    }
+}
+
+/* Skills Section */
+#skills {
+    max-width: 900px;
+    height: 100px;
+    margin-top: -150px;
+    margin-bottom: 50px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    left: 500px;
+}
+
+        #skills h2 {
+            padding: 10px;
+            margin-top: -2.5px;
+            font-size: 18px;
+            margin-bottom: 0px;
+            font-family: "Red Hat Display";
+        }
+
+        .skill-set {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-set img {
+            object-fit: contain;
+            width: 60px; 
+            height: 60px;
+            margin-top: -10px;
+            vertical-align: middle;
+            gap: 50px;
+        }
+
+/* Responsive Styling */
+@media (max-width: 1900px) {
+    #skills {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 250px; /* Adjust height for smaller screens */
+        position: relative;
+        left: 0px;
+        top: 120px;
+    }
+
+    #skills h2 {
+        font-size: 18px;
+    }
+
+    .skill-set {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 10px; /* Add some gap between images */
+    }
+
+    .skill-set img {
+        width: calc(60% - 20px); /* Two images in a row with 10px gap */
+        height: 40px;
+        flex: 1 1 calc(50% - 10px); /* Two images in a row */
+    }
+}
+        
+
+#location {
+    max-width: 300px;
+    height: 100px;
+    margin-top: -150px;
+    margin-bottom: 50px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    left: 1455px;
+}
+        
+        #location h2 {
+            padding: 10px;
+            margin-top: -2.5px;
+            font-size: 18px;
+            margin-bottom: 0px;
+            font-family: "Red Hat Display";
+        }
+        
+        #location p{
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 0px;
+            padding: 0px ;
+            color: #333;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: inline; 
+            vertical-align: middle;
+        }
+        .location-set {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .location-set img {
+            object-fit: contain;
+            width: 45px; 
+            height: 45px;
+            position: relative;
+            left: 20px;
+            margin-top: -10px;
+            vertical-align: middle;
+            gap: 50px;
+        }
+
+/* Responsive Styling */
+@media (max-width: 1900px) {
+    #location {
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px; /* Adjust height for smaller screens */
+        position: relative;
+        left: 0px;
+        top: 240px;
+    }
+}
+
+/* Projects Section */
 #projects {
     display: flex;
     flex-direction: column;
@@ -152,7 +454,7 @@ footer {
     width: 100%;
 }
 
-        .project-details {
+        .project-details{
             max-width: 40%;
             height: 615px;
             flex: 1; /* Allow the text container to grow and shrink */
@@ -228,177 +530,192 @@ footer {
             object-fit: cover;
         }
 
-@media (max-width: 1024px) {
+/* Responsive Styling for Projects Section */
+@media (max-width: 1900px) {
     .project-details {
         max-width: 100%;
-        padding: 10px;
+        padding: 20px;
+        font-size: 32px;
+        margin-top: -50px;
+        margin-bottom: 0px;
     }
-    .video-container1, .video-container2 {
+
+    .video-container1{
+        max-width: 100%;
+        padding: 0px;
+        float: none;
+        align-items: center;
+    }
+
+    .video-container2 {
+        max-width: 100%;
+        margin-top: 150px;
+        padding: 0px;
+        float: none;
+        align-items: center;
+    }
+
+    .img-container1, .img-container2, .img-container3,
+    .img-container4, .img-container5, .img-container6 {
         max-width: 100%;
         padding: 10px;
+        float: none;
     }
-    .project-container {
-        padding: 10px 50px;
+
+    #projects h1 {
+        font-size: 1.5rem;
+    }
+
+    #projects p {
+        font-size: 24px;
     }
 }
 
 @media (max-width: 768px) {
-    #projects h1 {
-        font-size: 1.5rem;
-        margin-top: 10px;
-        align-items: center;
-        justify-content: center;
-    }
-    #projects p {
-        font-size: 18px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-    }
     .project-details {
+        max-width: 100%;
+        padding: 20px;
         font-size: 16px;
+        margin-top: -50px;
+        margin-bottom: -50px;
     }
-    .project-container {
-        padding: 10px 20px;
-    }
-    .video-container1, .video-container2 {
+
+    .video-container1{
         max-width: 100%;
         padding: 0px;
-    }
-    .img-container1, .img-container2, .img-container3, .img-container4, .img-container5, .img-container6 {
-        max-width: 50%;
-        padding: 0px;
+        float: none;
         align-items: center;
-        justify-content: center;
+    }
+
+    .video-container2 {
+        max-width: 100%;
+        margin-top: 150px;
+        padding: 0px;
+        float: none;
+        align-items: center;
+    }
+
+    .img-container1, .img-container2, .img-container3,
+    .img-container4, .img-container5, .img-container6 {
+        max-width: 100%;
+        padding: 10px;
+        float: none;
+    }
+
+    #projects h1 {
+        font-size: 1.5rem;
+    }
+
+    #projects p {
+        font-size: 1.2rem;
     }
 }
 
-#about {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 100px;
-    background-color: #ffffff;
-    overflow-y: auto; /* Make the hero section scrollable */
-    width: 100%;
-    align-items: center;
+/* Contact Section */
+#contact {
+    max-width: 500px;
+    margin: 130px auto 0; /* Changed margin-top to 130px */
+    padding: 20px;
+    background-color: #ff9253;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-        .about-details {
-            max-width: 100%;
-            margin: 30px;
-            flex: 1; /* Allow the text container to grow and shrink */
-            padding: 0px; /* Add padding for better spacing */
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333; /* Text color */
-            float: right;
-        }
 
-        #about h1 {
-            margin-top: 100px;
-            font-size: 2rem;
+        #contact h2 {
+            font-size: 25px;
             margin-bottom: 0px;
             text-align: center;
-            font-family: "Red Hat Display";
         }
 
-        #about p {
-            font-size: 24px;
-            line-height: 1.4;
-            font-weight: lighter;
-            margin-top: 0;
-            text-align: center; /* Align text to the center */
-            font-family: "calibri";
-            font-family: "Red Hat Display";
+        #contact p {
+            font-size: 13px;
+            margin-bottom: 40px;
         }
 
-        .about-container {
-            width: 20%;
-            height: auto;
-            overflow: hidden;
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 10px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        input, textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #ff5400;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e14b00;
+        }
+
+#social {
+    max-width: 500px;
+    margin: 130px auto 0; /* Changed margin-top to 130px */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffe1a1;
+    border-radius: 5px;
+    text-align: center;
+}
+        .social-links {
+            display: flex;
             justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            border: 2px solid #000; 
+            gap: 20px;
         }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            margin-bottom: 100px;
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
         }
 
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: #007bff;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
+        .social-links img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
-        .container {
-            padding: 30px 30px;
-            position: relative;
-            width: 50%;
-        }
-        .left {
-            left: -10%;
-            text-align: center;
-
-        }
-        .right {
-            left: 52%;
+        #social h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
             text-align: center;
         }
-        .content {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            position: relative;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: #007bff;
-            border-radius: 50%;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px #007bff;
-        }
-        h2 {
-            margin-bottom: 5px;
-            font-size: 18px;
-            color: #007bff;  
-        }
-        p {
-            font-size: 14px;
-            color: #333;
-        }
-@media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 20px;
-            }
-            .container {
-                width: 100%;
-                padding-left: 50px;
-                text-align: left;
-            }
-            .container.right {
-                left: 0;
-            }
-            .container::after {
-                left: 20px;
-            }
+        #social p {
+            font-size: 13px;
+            margin-bottom: 40px;
         }
