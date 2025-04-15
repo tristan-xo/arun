@@ -30,7 +30,7 @@
         "title": "Designing & Printing of 3D Weighing Machine",
         "date": "Mar 29 - Apr 9",
         "content": "Started with the 3D designing of the weighing machine using Fusion 360. The design includes a base for the load cell, a platform for placing items, and a housing for the HX711 module. The design was finalized and exported as an STL file for 3D printing. The load cell was calibrated using a known weight to ensure accurate readings. The HX711 module was connected to the Raspberry Pi, and initial tests were conducted to verify the communication between the load cell and the Pi. The Python library for HX711 was installed, and basic scripts were written to read weight data. The next steps involve integrating the weighing functionality into the GUI, allowing users to see real-time weight measurements during item selection. The 3D Designs were sliced using Flash Forge and Cura software to prepare them for 3D printing. The designs were printed using a Creality Ender 3 printer with PLA filament. The printing process took approximately 6 hours for each part.",
-        "images": ["IMAGES/UPDATES/3D-1.jpg", "IMAGES/UPDATES/3D-2.jpg", "IMAGES/UPDATES/3D-3.jpg", "IMAGES/UPDATES/SUPPORT.jpg", "IMAGES/UPDATES/TRAY.jpg"]
+        "images": ["IMAGES/UPDATES/3D-1.jpg", "IMAGES/UPDATES/3D-2.jpg", "IMAGES/UPDATES/3D-3.jpg", "IMAGES/UPDATES/SUPPORT.JPG", "IMAGES/UPDATES/TRAY.JPG"]
       },
       {
         "year": "2025",
@@ -38,7 +38,7 @@
         "title": "Assembly of the Weigh Scale",
         "date": "Apr 10 - Apr 11",
         "content": "The assembly of the weighing machine was completed this week. The load cell was securely mounted on the base, and the platform was attached to ensure stability. The HX711 module was housed in a protective casing to prevent damage. The final assembly was tested for stability and accuracy. The load cell was calibrated using a known weight to ensure accurate readings. The HX711 module was connected to the Raspberry Pi, and initial tests were conducted to verify the communication between the load cell and the Pi. The Python library for HX711 was installed, and basic scripts were written to read weight data. The next steps involve integrating the weighing functionality into the GUI, allowing users to see real-time weight measurements during item selection.The final assembly was tested for stability and accuracy.",
-        "images": ["IMAGES/UPDATES/ASS-1.jpg", "IMAGES/UPDATES/ASS-2.jpg"]
+        "images": ["IMAGES/UPDATES/ASS-1.JPG", "IMAGES/UPDATES/ASS-2.JPG"]
       }
     ]
   }
