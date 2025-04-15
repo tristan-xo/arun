@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Updates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>
+  <nav>
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="updates.html">UPDATES</a></li>
+      </ul>
+  </nav>
+</header>
+<body>
+  <section id="updates">
+    <h1>Updates</h1>
+    <p style="text-align: center;">Type a year (e.g., 2024) to filter updates</p>
+
+    <input type="text" id="yearSearch" placeholder="Enter Year (e.g., 2024)">
+
+    <div class="week-list" id="weekList"></div>
+      <div class="update-details" id="updateDetails">
+        <button id="closeDetails" class="close-button">&times;</button>
+        <h2 id="updateTitle"></h2>
+        <p id="updateDate"></p>
+        <div id="updateContent" style="text-align: justify;"></div>
+        <div class="update-images" id="updateImages"></div>
+        <div id="updateContent2" style="text-align: justify;"></div>
+        
+    </div>
+  </section>
+</body>
+
+<script>
+  document.getElementById('closeDetails').addEventListener('click', function () {
+    document.getElementById('updateDetails').classList.remove('active');
+  });
+</script>
+
+<script>
+  let allUpdates = [];
+
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('updates.json')
+      .then(res => res.json())
+      .then(data => {
+        allUpdates = data.updates;
+      });
+
+    const input = document.getElementById('yearSearch');
+    input.addEventListener('input', function () {
+      const year = input.value.trim();
+      if (year.length >= 4) {
+        const filtered = allUpdates.filter(u => u.year.includes(year));
+        renderWeeks(filtered);
+      } else {
+        document.getElementById('weekList').innerHTML = '';
+        document.getElementById('updateDetails').classList.remove('active');
+      }
+    });
+  });
+
+  function renderWeeks(weeks) {
+    const container = document.getElementById('weekList');
+    container.innerHTML = '';
+
+    weeks.forEach(week => {
+      const div = document.createElement('div');
+      div.className = 'week-item';
+      div.innerHTML = `<strong>${week.week}:</strong> ${week.title}<br><small>${week.date}</small>`;
+      div.onclick = () => showDetails(week);
+      container.appendChild(div);
+    });
+
+    document.getElementById('updateDetails').classList.remove('active');
+  }
+
+  function showDetails(update) {
+    document.getElementById('updateTitle').textContent = update.title;
+    document.getElementById('updateDate').textContent = `${update.week} • ${update.date}`;
+    document.getElementById('updateContent').innerHTML = `<p>${update.content}</p>`;
+
+
+    const imgBox = document.getElementById('updateImages');
+    imgBox.innerHTML = '';
+    if (update.images && update.images.length > 0) {
+      update.images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = update.title;
+        imgBox.appendChild(img);
+      });
+    }
+
+    document.getElementById('updateDetails').classList.add('active');
+    document.getElementById('updateDetails').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+</html>

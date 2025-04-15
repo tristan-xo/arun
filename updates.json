@@ -1,0 +1,44 @@
+{
+    "updates": [
+      {
+        "year": "2025",
+        "week": "Week 4-7",
+        "title": "Research and Planning",
+        "date": "Jan 24 - Feb 15",
+        "content": "We have conducted extensive research and planning for the development of our POS (Point of Sale) system aimed at automating operations in ration shops. The system is built around a Raspberry Pi 4 and incorporates a user-friendly GUI designed in PyQt, based on an upcoming Figma interface. For user authentication and item quota management, we opted for QR code-based identification instead of traditional RFID smartcards. The QR codes, scanned using a Pi Camera and OpenCV, link to a user database containing details such as name, phone number, and item eligibility. We are using a load cell with an HX711 module to integrate a weighing machine, enabling precise measurement of items. The system architecture is organized around three core databases hosted on Airtable: Users, Stock, and Transactions. The Users table stores personal and QR data, the Stock table maintains item-wise limits and availability, and the Transactions table records every purchase. The system's interface includes a home screen with two main options—Scan QR and Update Stock—ensuring ease of use for shopkeepers. Item selection and weighing are tightly coupled to enforce quota limits and generate a final bill automatically. The weighing system will be integrated in the later stages once the components are acquired. Overall, the planning ensures scalability, ease of use, real-time data management, and transparency in public distribution."
+      },
+      {
+        "year": "2025",
+        "week": "Week 9-11",
+        "title": "Development of the GUI",
+        "date": "Feb 22 - Mar 8",
+        "content": "This week, we focused on the development of the graphical user interface (GUI) for the POS system using PyQt. The design is based on a custom Figma layout that ensures a clean and intuitive user experience suitable for ration shop operations. We began by structuring the main window with navigation to two primary sections: 'Scan QR' and 'Update Stock'. The 'Scan QR' flow integrates with the Pi Camera and triggers the OpenCV-based QR scanner, displaying user details and item lists upon successful scan. We also started implementing item selection functionality and designed placeholder fields to display measured weights and generate a final bill. The 'Update Stock' section provides an interface for shopkeepers to enter newly received inventory, which will be pushed to the Airtable stock database. Basic styling, layout alignment, and event handling were also completed. Future updates will involve dynamic data binding with the Airtable backend and integrating real-time weight readings from the HX711 load cell module. The GUI is being developed with scalability and modularity in mind to allow easy updates and additional features.",
+        "images": ["IMAGES/UPDATES/GUI-1.JPG", "IMAGES/UPDATES/GUI-2.JPG", "IMAGES/UPDATES/GUI-3.JPG", "IMAGES/UPDATES/GUI-4.JPG", "IMAGES/UPDATES/GUI-5.JPG"],
+        "content2":""
+      },
+      {
+        "year": "2025",
+        "week": "Week 12",
+        "title": "Development of DataBase",
+        "date": "Mar 9 - Mar 15",
+        "content": "This week, significant progress was made in setting up the database structure for our POS system using Airtable as the cloud-based backend. We designed and created three core tables: Users, Stock, and Transactions. The Users table stores essential details such as user name, phone number, and unique QR code mappings, enabling seamless identification during QR scanning. The Stock table maintains information about ration items, including item names, quota limits per user, and available quantity in stock. This allows dynamic inventory tracking and quota enforcement. The Transactions table is structured to log all user purchases, capturing details such as user ID, item name, quantity purchased, date, and total cost. We also established API integration with Airtable to allow Python-based read and write operations, which will connect to the GUI for real-time updates. Test records were added to ensure data consistency, and response times for CRUD operations were evaluated. Future tasks include implementing database validation checks, handling exceptions, and synchronizing the database with the weighing module to ensure accurate transaction logging.",
+        "images": ["IMAGES/UPDATES/DB-1.PNG", "IMAGES/UPDATES/DB-2.PNG", "IMAGES/UPDATES/DB-3.PNG"]
+      },
+      {
+        "year": "2025",
+        "week": "Week 14-15",
+        "title": "Designing & Printing of 3D Weighing Machine",
+        "date": "Mar 29 - Apr 9",
+        "content": "Started with the 3D designing of the weighing machine using Fusion 360. The design includes a base for the load cell, a platform for placing items, and a housing for the HX711 module. The design was finalized and exported as an STL file for 3D printing. The load cell was calibrated using a known weight to ensure accurate readings. The HX711 module was connected to the Raspberry Pi, and initial tests were conducted to verify the communication between the load cell and the Pi. The Python library for HX711 was installed, and basic scripts were written to read weight data. The next steps involve integrating the weighing functionality into the GUI, allowing users to see real-time weight measurements during item selection. The 3D Designs were sliced using Flash Forge and Cura software to prepare them for 3D printing. The designs were printed using a Creality Ender 3 printer with PLA filament. The printing process took approximately 6 hours for each part.",
+        "images": ["IMAGES/UPDATES/3D-1.JPG", "IMAGES/UPDATES/3D-2.JPG", "IMAGES/UPDATES/3D-3.JPG"]
+      },
+      {
+        "year": "2025",
+        "week": "Week 16",
+        "title": "Assembly of the Weigh Scale",
+        "date": "Apr 10 - Apr 11",
+        "content": "The assembly of the weighing machine was completed this week. The load cell was securely mounted on the base, and the platform was attached to ensure stability. The HX711 module was housed in a protective casing to prevent damage. The final assembly was tested for stability and accuracy. The load cell was calibrated using a known weight to ensure accurate readings. The HX711 module was connected to the Raspberry Pi, and initial tests were conducted to verify the communication between the load cell and the Pi. The Python library for HX711 was installed, and basic scripts were written to read weight data. The next steps involve integrating the weighing functionality into the GUI, allowing users to see real-time weight measurements during item selection.The final assembly was tested for stability and accuracy.",
+        "images": ["IMAGES/UPDATES/3D-1.JPG", "IMAGES/UPDATES/3D-2.JPG", "IMAGES/UPDATES/3D-3.JPG"]
+      }
+    ]
+  }
